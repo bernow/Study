@@ -1,0 +1,6 @@
+{   
+    // venv environment path settings
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    // pylint environment path settings
+    "python.linting.pylintPath": "venv\\Scripts\\python.exe"
+}
