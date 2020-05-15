@@ -7,7 +7,7 @@ pageNo <- 1
 check <- TRUE
 
 while(1){
-  url <- paste0("http://www.g2b.go.kr:8101/ep/tbid/tbidList.do?area=&bidNm=&bidSearchType=1&currentPageNo=",pageNo,"&fromBidDt=2020%2F05%2F13&fromOpenBidDt=&instNm=&maxPageViewNoByWshan=44&radOrgan=1&regYn=Y&searchDtType=1&searchType=1&taskClCds=5&toBidDt=2020%2F05%2F13&toOpenBidDt=&")
+  url <- paste0("http://www.g2b.go.kr:8101/ep/tbid/tbidList.do?area=&bidNm=&bidSearchType=1&currentPageNo=",pageNo,"&fromBidDt=2020%2F05%2F14&fromOpenBidDt=&instNm=&maxPageViewNoByWshan=44&radOrgan=1&regYn=Y&searchDtType=1&searchType=1&taskClCds=5&toBidDt=2020%2F05%2F14&toOpenBidDt=&")
   nara <- read_html(url, encoding="CP949")
   for(i in 1:10){
     nodes <- html_nodes(nara, xpath = paste0('//*[@id="resultForm"]/div[2]/table/tbody/tr[',i,']/td'))
@@ -36,4 +36,4 @@ names(df) <- c("업무", "공고번호-차수", "분류", "공고명", "공고�
 
 df[length(df[,1]),1:8]
 df
-write.csv(df, "0513.csv", row.names = F)
+write.csv(df, "0514.csv", row.names = F)
